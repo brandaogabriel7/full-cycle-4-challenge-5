@@ -20,6 +20,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
       # Builds the nestjs project
       - name: Build project
         run: npm run build
